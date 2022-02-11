@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="main-container">
       <Link to="/">
-        <img id="logo" src="/logo.png" />
+        <img alt="site logo" id="logo" src="/logo.png" />
       </Link>
       <Header />
       <Switch>
