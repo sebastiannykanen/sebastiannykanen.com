@@ -4,14 +4,16 @@ import Projects from "./Projects";
 import Me from "./Me";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
-import { Switch, Route } from "react-router-dom";
+import { Link, Switch, Route } from "react-router-dom";
 import About from "./About";
 
 function App() {
   return (
     <div className="main-container">
+      <Link to="/">
+        <img id="logo" src="/logo.png" />
+      </Link>
       <Header />
-      {/* <img src="/logo.png" /> */}
       <Switch>
         <Route path="/" exact component={Me} />
         <Route path="/about" component={About} />

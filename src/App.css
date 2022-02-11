@@ -16,8 +16,11 @@ a:hover {
   color: rgb(197, 197, 197);
 }
 
-img {
+#logo {
   max-width: 100px;
+  position: fixed;
+  left: 2%;
+  top: 5%;
 }
 
 .main-container {
