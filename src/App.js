@@ -4,7 +4,7 @@ import Projects from "./Projects";
 import Me from "./Me";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
-import { Route, Switch, Link, useLocation } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import About from "./About";
 
 function App() {
