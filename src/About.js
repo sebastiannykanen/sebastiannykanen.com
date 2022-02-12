@@ -5,7 +5,7 @@ function About(props) {
     <div id="About-main">
       <div></div>
       <img
-        alt="Picture of Sebastian Nykänen"
+        alt="Sebastian Nykänen"
         id="profile-picture"
         src="/profilepicture.jpeg"
       />
