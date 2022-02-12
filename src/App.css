@@ -75,15 +75,17 @@ a:hover {
 #About-main {
   min-height: 80%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 10vh;
   font-size: 18px;
   color: white;
+  margin: 0 100px;
 }
 
 #AboutMe {
+  padding: 5vh;
   max-width: 75vh;
 }
 
