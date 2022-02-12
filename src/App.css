@@ -23,6 +23,12 @@ a:hover {
   top: 5%;
 }
 
+#profile-picture {
+  max-width: 40vh;
+  border-radius: 3%;
+  border: 2px solid black;
+}
+
 .main-container {
   height: 100%;
   text-align: center;
@@ -64,6 +70,21 @@ a:hover {
   justify-content: center;
   font-size: 24px;
   color: white;
+}
+
+#About-main {
+  min-height: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10vh;
+  font-size: 18px;
+  color: white;
+}
+
+#AboutMe {
+  max-width: 75vh;
 }
 
 #App-footer {
