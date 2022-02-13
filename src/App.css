@@ -4,7 +4,6 @@ body,
   height: 100%;
   box-sizing: border-box;
   margin: 0;
-  min-width: 38rem;
   background-color: #63b4a0;
 }
 
@@ -25,7 +24,8 @@ a:hover {
 }
 
 #profile-picture {
-  max-width: 40vh;
+  width: 40vh;
+  margin: 50px;
   border-radius: 3%;
   border: 2px solid black;
 }
@@ -70,6 +70,17 @@ a:hover {
   justify-content: center;
   font-size: 24px;
   color: white;
+  margin: 0 175px;
+}
+
+#Projects-main {
+  min-height: 80%;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10vh;
+  font-size: 24px;
+  color: white;
+  margin: 0 175px;
 }
 
 #About-main {
@@ -87,6 +98,7 @@ a:hover {
 #AboutMe {
   padding: 5vh;
   max-width: 75vh;
+  text-align: left;
 }
 
 #App-footer {
@@ -101,4 +113,60 @@ a:hover {
 
 .App-link {
   color: #61dafb;
+}
+
+@media (max-width: 900px) {
+  #Projects-main {
+    grid-auto-flow: row;
+  }
+}
+
+@media (max-width: 500px) {
+  html,
+  body,
+  #root {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+  }
+
+  #logo {
+    max-width: 50px;
+    left: 2%;
+    top: 2%;
+  }
+
+  #profile-picture {
+    max-width: 30vh;
+  }
+
+  #About-main {
+    font-size: 12px;
+    margin: 0 50px;
+    line-height: 1.25;
+  }
+
+  .Sidebar-icons {
+    scale: 75%;
+    margin: 5px;
+  }
+
+  #AboutMe {
+    padding: 10px 20px;
+    text-align: left;
+    word-wrap: break-word;
+  }
+
+  #App-sidebar {
+    display: none;
+  }
+
+  #Projects-main {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 10vh;
+    font-size: 18px;
+    margin: 0;
+  }
 }
