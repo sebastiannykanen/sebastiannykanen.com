@@ -141,7 +141,7 @@ a:hover {
   }
 
   #profile-picture {
-    max-width: 30vh;
+    width: 30vh;
   }
 
   #About-main {
