@@ -1,13 +1,13 @@
 import "./App.css";
 import Footer from "./Footer";
-import Projects from "./Projects";
-import Me from "./Me";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+import Projects from "./components/Projects";
+import Me from "./components/Me";
+import Header from "./components/Header";
 import { Route, Switch } from "react-router-dom";
-import About from "./About";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
-function App() {
+function App(props) {
   return (
     <div className="main-container">
       <Header />
@@ -15,9 +15,9 @@ function App() {
         <Route path="/" exact component={Me} />
         <Route path="/about" exact component={About} />
         <Route path="/projects" exact component={Projects} />
+        <Route path="/contact" exact component={Contact} />
       </Switch>
       <Footer />
-      <Sidebar />
     </div>
   );
 }

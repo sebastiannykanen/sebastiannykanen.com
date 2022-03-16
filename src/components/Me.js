@@ -1,5 +1,5 @@
 import React from "react";
-import AnimatedPage from "./AnimatedPage";
+import AnimatedPage from "../AnimatedPage";
 
 const Me = () => {
   return (
