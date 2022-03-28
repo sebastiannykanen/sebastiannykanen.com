@@ -44,7 +44,15 @@ a:hover {
 }
 
 .card1 {
+  background-image: url("../public/thomas-bormans-pcpsVsyFp_s-unsplash.jpg");
+}
+
+.card2 {
   background-image: url("../public/asher-zhang-8JJ_sPcUaNA-unsplash.jpg");
+}
+
+.card3 {
+  background-image: url("../public/chris-liverani-ViEBSoZH6M4-unsplash.jpg");
 }
 
 #profile-picture {
