@@ -11,7 +11,7 @@ function App(props) {
   return (
     <div className="main-container">
       <Header />
-      <Switch>
+      <Switch className="switch">
         <Route path="/" exact component={Me} />
         <Route path="/about" exact component={About} />
         <Route path="/projects" exact component={Projects} />

@@ -87,7 +87,16 @@ a:hover {
 }
 
 #App-header {
+  width: 100%;
   display: flex;
+}
+
+.switch {
+  width: 100%;
+}
+
+.animatedPage {
+  width: 100%;
 }
 
 #navigation-links {
