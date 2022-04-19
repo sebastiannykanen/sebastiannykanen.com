@@ -99,6 +99,10 @@ a:hover {
   width: 100%;
 }
 
+.githubLink {
+  text-decoration: underline;
+}
+
 #navigation-links {
   min-height: 10%;
   display: flex;
