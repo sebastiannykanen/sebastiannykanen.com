@@ -35,6 +35,7 @@ function Contact(props) {
             id="contact-name"
             name="name"
             placeholder="Name"
+            required
           ></input>
           <br />
           <input
@@ -42,6 +43,7 @@ function Contact(props) {
             id="contact-email"
             name="email"
             placeholder="Email"
+            required
           ></input>
           <br />
           <textarea
@@ -51,6 +53,7 @@ function Contact(props) {
             id="contact-message"
             name="message"
             placeholder="Message"
+            required
           ></textarea>
           <br />
           <input type="submit" id="contact-submit" value="Submit"></input>
