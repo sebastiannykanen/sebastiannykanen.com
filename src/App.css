@@ -3,23 +3,43 @@ body,
   height: 100vh;
   box-sizing: border-box;
   margin: 0;
+  font-family: "Source Code Pro", monospace;
+}
+
+:root {
+  --bg-color: #f5f3ea;
+  --revealSpeed: 3s;
+  --typewriterCharacters: 24;
 }
 
 head {
-  background-color: #63b4a0;
+  background-color: var(--bg-color);
 }
 
 html {
-  background-color: #63b4a0;
+  background-color: var(--bg-color);
 }
 
 a {
-  color: white;
   text-decoration: none; /* no underline */
 }
 
 a:hover {
-  color: rgb(197, 197, 197);
+  color: rgb(95, 95, 95);
+}
+
+h1 {
+  color: black;
+  font-weight: 100;
+}
+
+h2 {
+  color: white;
+  font-weight: 100;
+}
+
+h3 {
+  font-weight: 100;
 }
 
 #logo {
@@ -41,6 +61,64 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.name {
+  position: relative;
+}
+
+.name::before,
+.name::after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.name::before {
+  background: var(--bg-color);
+  animation: reveal var(--revealSpeed) steps(17) 2050ms forwards;
+}
+
+.name::after {
+  width: 0.2rem;
+  background: black;
+  opacity: 1;
+  animation: reveal var(--revealSpeed) steps(17) 2050ms forwards, blink1 750ms 3,
+    blink2 750ms 5050ms infinite;
+}
+
+.fed {
+  opacity: 0;
+  transform: translateY(5rem);
+  animation: fadeIn 1s ease calc(var(--revealSpeed) + 3s) forwards;
+}
+
+@keyframes blink1 {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blink2 {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes reveal {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .card1 {
@@ -101,6 +179,11 @@ a:hover {
 
 .githubLink {
   text-decoration: underline;
+  color: black;
+}
+
+.githubLink:hover {
+  color: rgb(95, 95, 95);
 }
 
 #navigation-links {
@@ -112,11 +195,15 @@ a:hover {
   justify-content: center;
   gap: 10vh;
   font-size: 12px;
-  color: white;
+  color: black;
+}
+
+#navigation-links h1:hover {
+  color: rgb(95, 95, 95);
 }
 
 #navigation-links-mobile {
-  background-color: #63b4a0;
+  background-color: var(--bg-color);
   z-index: 50;
   position: fixed;
   width: 100%;
@@ -149,10 +236,8 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  color: white;
+  font-size: 2rem;
   margin: 0 175px;
-  overflow: hidden;
 }
 
 #Projects-main {
@@ -162,7 +247,6 @@ a:hover {
   justify-content: space-around;
   align-items: center;
   font-size: 24px;
-  color: white;
   margin: 0 175px;
 }
 
@@ -174,7 +258,6 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: white;
   margin: 0 175px;
 }
 
@@ -186,7 +269,6 @@ a:hover {
 }
 
 #Contact-main {
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -207,19 +289,19 @@ a:hover {
   justify-content: center;
 }
 
-#name {
+#contact-name {
   margin: 5px;
   width: 200px;
   padding: 4px;
 }
 
-#email {
+#contact-email {
   margin: 5px;
   width: 200px;
   padding: 4px;
 }
 
-#message {
+#contact-message {
   margin: 5px;
   padding: 4px;
   min-width: 5vh;
@@ -229,9 +311,10 @@ a:hover {
 
 #contact-submit {
   width: 100px;
-  background: #63b4a0;
+  background: black;
   font-weight: bold;
-  color: white;
+  font-size: 1rem;
+  color: var(--bg-color);
   border: 0 none;
   border-radius: 1px;
   cursor: pointer;
@@ -247,7 +330,6 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-size: 12px;
-  color: white;
 }
 
 .App-link {
@@ -268,12 +350,37 @@ a:hover {
     margin: 0 50px;
     line-height: 1.25;
   }
+
+  .name {
+    position: relative;
+  }
+
+  .name::before,
+  .name::after {
+    opacity: 0;
+  }
+
+  .name::before {
+    background: var(--bg-color);
+    animation: none;
+  }
+
+  .name::after {
+    opacity: 0;
+    animation: none;
+  }
+
+  .fed {
+    opacity: 1;
+    transform: translateY(0);
+    animation: none;
+  }
 }
 
 @media (max-width: 800px) {
   html {
     height: 100vh;
-    background-color: #63b4a0;
+    background-color: var(--bg-color);
   }
 
   #logo {
@@ -293,6 +400,14 @@ a:hover {
 
   #hamburger-icon {
     height: 35px;
+  }
+
+  #App-main h1 {
+    font-size: 2.5rem;
+  }
+
+  #App-main h3 {
+    font-size: 1.5rem;
   }
 
   #About-main {

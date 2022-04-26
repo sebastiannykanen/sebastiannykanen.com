@@ -30,11 +30,16 @@ function Contact(props) {
       <div className="contact-form">
         <form onSubmit={sendEmail}>
           <p>Interested in hiring me? Please contact me below!</p>
-          <input type="text" id="name" name="name" placeholder="Name"></input>
+          <input
+            type="text"
+            id="contact-name"
+            name="name"
+            placeholder="Name"
+          ></input>
           <br />
           <input
             type="text"
-            id="email"
+            id="contact-email"
             name="email"
             placeholder="Email"
           ></input>
@@ -43,7 +48,7 @@ function Contact(props) {
             rows="3"
             cols="30"
             type="text"
-            id="message"
+            id="contact-message"
             name="message"
             placeholder="Message"
           ></textarea>
