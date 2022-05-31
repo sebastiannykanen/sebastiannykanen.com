@@ -19,6 +19,11 @@ function Projects(props) {
           <h2>React Calculator</h2>
         </a>
       </div>
+      <div className="project-card card4">
+        <a href="https://to-do-list-v2.sebastiannykanen.com/">
+          <h2>To do List with Firestore database</h2>
+        </a>
+      </div>
     </div>
   );
 }

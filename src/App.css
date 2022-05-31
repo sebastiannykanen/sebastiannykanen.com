@@ -133,6 +133,10 @@ h3 {
   background-image: url("../public/chris-liverani-ViEBSoZH6M4-unsplash.jpg");
 }
 
+.card4 {
+  background-image: url("../public/glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg");
+}
+
 #profile-picture {
   width: 500px;
   margin: 50px;
