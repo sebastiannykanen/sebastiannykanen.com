@@ -24,6 +24,11 @@ function Projects(props) {
           <h2>To do List with Firestore database</h2>
         </a>
       </div>
+      <div className="project-card card5">
+        <a href="https://jsblog.sebastiannykanen.com/">
+          <h2>Blog made with GraphQL and Next.js</h2>
+        </a>
+      </div>
     </div>
   );
 }
